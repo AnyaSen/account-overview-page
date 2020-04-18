@@ -1,0 +1,21 @@
+@import "../../../assets/scss/variables";
+
+.UserInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: $space-2 $space-2;
+}
+
+.UserImgContainer {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: $space-4;
+    width: auto;
+    border-radius: 2rem;
+    box-shadow: $shadow-1;
+    align-self: flex-end;
+    margin-right: $space-1;
+  }
+}

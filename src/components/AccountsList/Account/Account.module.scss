@@ -1,0 +1,19 @@
+@import "../../../assets/scss/variables";
+
+.Account{
+    margin: $space-2;
+    padding: $space-1;
+    width: fit-content;
+    box-shadow: $shadow-1;
+    position:relative;
+}
+
+.activePin{
+    background-color: $color-green;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 0.5rem;
+    position:absolute;
+    top:0;
+    left: 0
+}

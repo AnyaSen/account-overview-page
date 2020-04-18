@@ -1,0 +1,18 @@
+@import "../../assets/scss/variables";
+
+.SearchForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: $space-1;
+  margin-bottom:$space-2;
+
+  h1{
+      margin-bottom: $space-2
+  }
+}
+
+.SearchFormContainer {
+  display: flex;
+  justify-content: center;
+}

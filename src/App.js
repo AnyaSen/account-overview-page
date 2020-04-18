@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import AccountsList from "./components/AccountsList/AccountsList";
+import './App.scss'
+
+import AccountsPage from './pages/AccountsPage/AccountsPage'
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <AccountsList />
+      <AccountsPage/>
     </div>
   );
 }

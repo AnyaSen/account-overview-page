@@ -1,0 +1,15 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/breakpoints";
+
+@mixin button($bg-color, $bg-hover-color, $txt-color) {
+  padding: $space-0 $space-1;
+  font-size: $font-sm;
+  font-family: inherit;
+  color: $txt-color;
+  background-color: $bg-color;
+  margin: $space-1;
+
+  &:hover {
+    background-color: $bg-hover-color;
+  }
+}

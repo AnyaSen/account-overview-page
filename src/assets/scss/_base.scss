@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
 @import './variables';
-@import './typography';
 
 * {
 	margin: 0;
@@ -12,7 +11,6 @@
 html {
 	box-sizing: border-box;
 	color: $color-text;
-	font-size: 63%;
 }
 
 body {
@@ -25,6 +23,7 @@ body {
 	min-width: 100vw;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	 animation: fadeIn 0.3s ease-in-out;
 }
 
 button {
@@ -47,4 +46,14 @@ button {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

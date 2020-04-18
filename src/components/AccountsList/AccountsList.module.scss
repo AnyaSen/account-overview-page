@@ -1,0 +1,10 @@
+@import "../../assets/scss/variables";
+
+
+.AccountsList{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: $space-2;
+    border-top: 1px solid $color-border;
+    justify-content: center;
+}
