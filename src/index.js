@@ -5,16 +5,22 @@ import { BrowserRouter } from "react-router-dom";
 
 import { UserInfoContextProvider } from "./contexts/UserInfoContext";
 import { AccountsContextProvider } from "./contexts/AccountsContext";
+import { LoadingContextProvider } from "./contexts/LoadingContext";
+import { ErrorContextProvider } from "./contexts/ErrorContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <UserInfoContextProvider>
-      <AccountsContextProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </AccountsContextProvider>
-    </UserInfoContextProvider>
+    <ErrorContextProvider>
+      <LoadingContextProvider>
+        <UserInfoContextProvider>
+          <AccountsContextProvider>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </AccountsContextProvider>
+        </UserInfoContextProvider>
+      </LoadingContextProvider>
+    </ErrorContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

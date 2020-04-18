@@ -1,11 +1,18 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useEffect, useContext } from "react";
 import { fetchData } from "../services/fetchData";
+
+import { LoadingContext } from "./LoadingContext";
+import { ErrorContext } from "./ErrorContext";
 
 export const AccountsContext = createContext();
 
 export const AccountsContextProvider = ({ children }) => {
-  const [accNumber, setAccNumber] = useState(90);
+  const { setIsLoading } = useContext(LoadingContext);
+  const { setIsError } = useContext(ErrorContext);
+
+  const [accNumber, setAccNumber] = useState("");
   const [accounts, setAccounts] = useState([]);
+  const [modifiedAccounts, setModifiedAccounts] = useState([]);
 
   const setInitialUserData = async () => {
     const user_accounts_URL =
@@ -15,9 +22,15 @@ export const AccountsContextProvider = ({ children }) => {
       const accountsData = await fetchData(user_accounts_URL);
 
       setAccounts(accountsData);
+      setModifiedAccounts(accountsData);
       setAccNumber(accountsData.length);
+
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
+
+      setIsError(true);
+      setIsLoading(false);
     }
   };
 
@@ -29,7 +42,9 @@ export const AccountsContextProvider = ({ children }) => {
     <AccountsContext.Provider
       value={{
         accNumber,
-        accounts
+        accounts,
+        modifiedAccounts,
+        setModifiedAccounts
       }}
     >
       {children}

@@ -1,9 +1,15 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useEffect, useContext } from "react";
 import { fetchData } from "../services/fetchData";
+
+import { LoadingContext } from "./LoadingContext";
+import { ErrorContext } from "./ErrorContext";
 
 export const UserInfoContext = createContext();
 
 export const UserInfoContextProvider = ({ children }) => {
+  const { setIsLoading } = useContext(LoadingContext);
+  const { setIsError } = useContext(ErrorContext);
+
   const [name, setName] = useState("SOME NAME");
 
   const setInitialUserData = async () => {
@@ -16,8 +22,11 @@ export const UserInfoContextProvider = ({ children }) => {
       const { firstName, lastName } = userData;
 
       setName(`${firstName} ${lastName}`);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
+      setIsError(true);
+      setIsLoading(false);
     }
   };
 

@@ -5,22 +5,26 @@ import Styles from "./AccountsList.module.scss";
 import Account from "./Account/Account";
 
 export default function AccountsList() {
-  const { accounts } = useContext(AccountsContext);
+  const { modifiedAccounts } = useContext(AccountsContext);
 
   return (
     <div className={Styles.AccountsList}>
-      {accounts.map((account, index) => {
-        const { name, id, balance } = account;
-        return (
-          <Account
-            name={name}
-            ID={id}
-            balance={balance}
-            active={true}
-            key={index}
-          />
-        );
-      })}
+      {modifiedAccounts.length === 0 ? (
+        <h3>Sorry, account not found</h3>
+      ) : (
+        modifiedAccounts.map((account, index) => {
+          const { name, id, balance, currency } = account;
+          return (
+            <Account
+              name={name}
+              ID={id}
+              balance={balance + currency.symbol}
+              active={true}
+              key={index}
+            />
+          );
+        })
+      )}
     </div>
   );
 }

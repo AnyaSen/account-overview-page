@@ -1,12 +1,18 @@
 import React from "react";
-import './App.scss'
+import { Route, Switch } from "react-router-dom";
 
-import AccountsPage from './pages/AccountsPage/AccountsPage'
+import "./App.scss";
+
+import AccountsPage from "./pages/AccountsPage/AccountsPage";
+import ErrorCard from "./pages/ErrorCard/ErrorCard";
 
 function App() {
   return (
     <div className="App">
-      <AccountsPage/>
+      <Switch>
+        <Route exact path="/" component={AccountsPage} />
+        <Route component={ErrorCard} />
+      </Switch>
     </div>
   );
 }
