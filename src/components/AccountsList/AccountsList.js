@@ -5,11 +5,22 @@ import Styles from "./AccountsList.module.scss";
 import Account from "./Account/Account";
 
 export default function AccountsList() {
-  const { accName, accID, accBalance } = useContext(AccountsContext);
+  const { accounts } = useContext(AccountsContext);
 
   return (
     <div className={Styles.AccountsList}>
-      <Account name={accName} ID={accID} balance={accBalance} active={true} />
+      {accounts.map((account, index) => {
+        const { name, id, balance } = account;
+        return (
+          <Account
+            name={name}
+            ID={id}
+            balance={balance}
+            active={true}
+            key={index}
+          />
+        );
+      })}
     </div>
   );
 }
