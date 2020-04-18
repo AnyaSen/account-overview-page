@@ -8,8 +8,14 @@
   color: $txt-color;
   background-color: $bg-color;
   margin: $space-1;
+  width: fit-content;
 
   &:hover {
     background-color: $bg-hover-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
   }
 }

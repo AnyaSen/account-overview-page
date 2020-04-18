@@ -1,5 +1,10 @@
-@import '../../../assets/scss/mixins';
+@import "../../../assets/scss/mixins";
+@import "../../../assets/scss/variables";
 
 .SecondaryButton {
-	@include button($color-light-grey, $color-light-grey, $color-grey);
+  @include button($color-green, $color-dark-green, $color-white);
+
+  &:disabled {
+    @include button($color-light-grey, $color-light-grey, $color-grey);
+  }
 }
