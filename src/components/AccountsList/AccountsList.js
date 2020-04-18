@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AccountsContext } from "../../contexts/AccountsContext";
 import Styles from "./AccountsList.module.scss";
 
 import Account from "./Account/Account";
 
 export default function AccountsList() {
+  const { accName, accID, accBalance } = useContext(AccountsContext);
+
   return (
     <div className={Styles.AccountsList}>
-      <Account accName="Funding_account" accID="DKUW67" accBalance="50€" active={true} />
-      <Account accName="Funding_account" accID="DKUW67" accBalance="50€" active={false} />
-      <Account accName="Funding_account" accID="DKUW67" accBalance="50€" active={true} />
-      
+      <Account name={accName} ID={accID} balance={accBalance} active={true} />
     </div>
   );
 }

@@ -1,13 +1,15 @@
 import React from "react";
+
 import Styles from "./Account.module.scss";
 
-export default function Account({ accName, accID, accBalance, active }) {
+export default function Account({ name, ID, balance, active }) {
   return (
     <div className={Styles.Account}>
-      <p>Name: {accName}</p>
-      <p>ID: {accID}</p>
-      <p>Balance: {accBalance}</p>
-      {active ? <div className={Styles.activePin}></div>: null}
+      <p>Name: {name}</p>
+      <p>ID: {ID}</p>
+      <p>Balance: {balance}</p>
+
+      {active ? <div className={Styles.activePin}></div> : null}
     </div>
   );
 }
