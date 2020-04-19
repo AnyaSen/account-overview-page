@@ -3,13 +3,16 @@ import React, { createContext, useState } from "react";
 export const ErrorContext = createContext();
 
 export const ErrorContextProvider = ({ children }) => {
-  const [isError, setIsError] = useState(false);
+  const [isAccountsError, setIsAccountsError] = useState(false);
+  const [isUserInfoError, setIsUserInfoError] = useState(false);
 
   return (
     <ErrorContext.Provider
       value={{
-        isError,
-        setIsError
+        isAccountsError,
+        setIsAccountsError,
+        isUserInfoError,
+        setIsUserInfoError
       }}
     >
       {children}
