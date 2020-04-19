@@ -65,7 +65,7 @@ export default function SearchForm() {
   };
 
   return (
-    <div className={Styles.SearchForm}>
+    <div data-testid="Search-form" className={Styles.SearchForm}>
       <h1>INVESTMENT ACCOUNTS OVERVIEW</h1>
 
       <form
@@ -74,13 +74,13 @@ export default function SearchForm() {
       >
         <div className={Styles.inputsContainer}>
           <InputField
-            placehold="Name"
+            placeholder="Name"
             inputValue={nameValue}
             onChange={onChangeNameValue}
           />
 
           <InputField
-            placehold="ID"
+            placeholder="ID"
             inputValue={idValue}
             onChange={onChangeIdValue}
           />

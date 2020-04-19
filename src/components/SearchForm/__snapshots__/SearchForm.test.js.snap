@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchForm /> Should have have 2 children. 1`] = `
+<div
+  class="SearchForm"
+  data-testid="Search-form"
+>
+  <h1>
+    INVESTMENT ACCOUNTS OVERVIEW
+  </h1>
+  <form
+    class="SearchFormContainer"
+  >
+    <div
+      class="inputsContainer"
+    >
+      <input
+        class="InputField"
+        data-testid="InputField"
+        placeholder="Name"
+        type="text"
+        value=""
+      />
+      <input
+        class="InputField"
+        data-testid="InputField"
+        placeholder="ID"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="btnsContainer"
+    >
+      <button
+        class="PrimaryButton"
+        disabled=""
+        type="submit"
+        value="submit"
+      >
+        Search
+      </button>
+      <button
+        class="SecondaryButton"
+        disabled=""
+      >
+        Show all
+      </button>
+    </div>
+  </form>
+</div>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputField /> Should have correct placeholder & value. 1`] = `
+<input
+  class="InputField"
+  data-testid="InputField"
+  placeholder="ID"
+  type="text"
+  value="HAS43O"
+/>
+`;
