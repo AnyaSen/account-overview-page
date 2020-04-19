@@ -1,0 +1,20 @@
+@import "./variables";
+@import "./breakpoints";
+
+h1 {
+  @include lg {
+    font-size: $font-md;
+  }
+}
+
+h3 {
+  @include lg {
+    font-size: $font-sm;
+  }
+}
+
+p {
+  @include lg {
+    font-size: $font-sm;
+  }
+}

@@ -1,19 +1,25 @@
 @import "../../../assets/scss/variables";
+@import "../../../assets/scss/breakpoints";
 
-.Account{
-    margin: $space-2;
-    padding: $space-1;
-    width: fit-content;
-    box-shadow: $shadow-1;
-    position:relative;
+.Account {
+  margin: $space-2;
+  padding: $space-1;
+  width: fit-content;
+  box-shadow: $shadow-1;
+  position: relative;
+
+  @include sm {
+    margin: $space-2 $space-1;
+    font-size: 5rem;
+  }
 }
 
-.activePin{
-    background-color: $color-green;
-    height: 1rem;
-    width: 1rem;
-    border-radius: 0.5rem;
-    position:absolute;
-    top:0;
-    left: 0
+.activePin {
+  background-color: $color-green;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

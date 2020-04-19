@@ -1,18 +1,40 @@
 @import "../../assets/scss/variables";
+@import "../../assets/scss/breakpoints";
 
 .SearchForm {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: $space-1;
-  margin-bottom:$space-2;
+  margin-bottom: $space-2;
+  flex-wrap: wrap;
 
-  h1{
-      margin-bottom: $space-2
+  h1 {
+    margin: $space-2;
+
+    @include sm {
+      margin: $space-1;
+    }
   }
 }
 
 .SearchFormContainer {
   display: flex;
   justify-content: center;
+
+  @include md {
+    flex-direction: column;
+  }
+}
+
+.inputsContainer {
+  margin: $space-0 $space-2;
+}
+.btnsContainer {
+  display: flex;
+  align-items: center;
+
+  @include md {
+    justify-content: center;
+  }
 }

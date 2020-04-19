@@ -72,29 +72,32 @@ export default function SearchForm() {
         onSubmit={e => e.preventDefault()}
         className={Styles.SearchFormContainer}
       >
-        <InputField
-          placehold="Name"
-          inputValue={nameValue}
-          onChange={onChangeNameValue}
-        />
+        <div className={Styles.inputsContainer}>
+          <InputField
+            placehold="Name"
+            inputValue={nameValue}
+            onChange={onChangeNameValue}
+          />
 
-        <InputField
-          placehold="ID"
-          inputValue={idValue}
-          onChange={onChangeIdValue}
-        />
+          <InputField
+            placehold="ID"
+            inputValue={idValue}
+            onChange={onChangeIdValue}
+          />
+        </div>
+        <div className={Styles.btnsContainer}>
+          <PrimaryButton
+            btnText="Search"
+            isDisabled={isDisabledSearchBtn}
+            onClick={handleSubmit}
+          />
 
-        <PrimaryButton
-          btnText="Search"
-          isDisabled={isDisabledSearchBtn}
-          onClick={handleSubmit}
-        />
-
-        <SecondaryButton
-          btnText="Show all"
-          isDisabled={isDisabledShowAllBtn}
-          onClick={showAll}
-        />
+          <SecondaryButton
+            btnText="Show all"
+            isDisabled={isDisabledShowAllBtn}
+            onClick={showAll}
+          />
+        </div>
       </form>
     </div>
   );

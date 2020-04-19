@@ -1,4 +1,6 @@
 @import "../../assets/scss/variables";
+@import "../../assets/scss/breakpoints";
+
 .LoadingPage {
   display: flex;
   flex-direction: column;
@@ -9,5 +11,9 @@
   img {
     margin-bottom: $space-2;
     height: 15rem;
+
+    @include lg {
+      height: 10rem;
+    }
   }
 }

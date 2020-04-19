@@ -1,12 +1,22 @@
 @import "../../../assets/scss/variables";
+@import "../../../assets/scss/breakpoints";
 
-.InputField{
-    padding: $space-0 $space-1;
-    margin: $space-0;
-    border: none;
-    outline: none;
-    background-color: $color-light-grey;
-    color: $color-dark-grey;
+.InputField {
+  padding: $space-1;
+  margin: $space-0;
+  border: none;
+  outline: none;
+  background-color: $color-light-grey;
+  color: $color-dark-grey;
+  font-size: $font-sm;
+  border-radius: $base-unit;
+
+  @include lg {
     font-size: $font-sm;
-    border-radius: $base-unit;
+  }
+
+  @include md {
+    font-size: $font-sm;
+    padding: $space-0 $space-1;
+  }
 }

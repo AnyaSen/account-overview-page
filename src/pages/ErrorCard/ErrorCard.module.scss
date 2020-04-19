@@ -1,4 +1,5 @@
 @import "../../assets/scss/variables";
+@import "../../assets/scss/breakpoints";
 
 .ErrorCardContainer {
   display: flex;
@@ -12,8 +13,12 @@
   img {
     height: 9rem;
     margin-bottom: $space-4;
+
+    @include sm {
+      height: 7rem;
+    }
   }
-  p {
-    margin-bottom: $space-4;
+  h3 {
+    margin-bottom: $space-3;
   }
 }

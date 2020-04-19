@@ -18,4 +18,9 @@
     cursor: not-allowed;
     opacity: 0.8;
   }
+
+  @include lg {
+    font-size: $font-sm;
+    margin: $space-0;
+  }
 }
