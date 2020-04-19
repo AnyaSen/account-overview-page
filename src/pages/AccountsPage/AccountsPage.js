@@ -10,11 +10,11 @@ import { LoadingContext } from "../../contexts/LoadingContext";
 import { ErrorContext } from "../../contexts/ErrorContext";
 
 export default function AccountsPage() {
-  const { isLoading } = useContext(LoadingContext);
-  const { isError } = useContext(ErrorContext);
+  const { isUserInfoLoading } = useContext(LoadingContext);
+  const { isUserInfoError } = useContext(ErrorContext);
 
-  if (isLoading) return <LoadingPage />;
-  if (isError) return <ErrorCard />;
+  if (isUserInfoLoading) return <LoadingPage />;
+  if (isUserInfoError) return <ErrorCard />;
 
   return (
     <div className={Styles.AccountsPage}>

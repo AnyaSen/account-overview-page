@@ -3,9 +3,18 @@ import { AccountsContext } from "../../contexts/AccountsContext";
 import Styles from "./AccountsList.module.scss";
 
 import Account from "./Account/Account";
+import { ErrorContext } from "../../contexts/ErrorContext";
+import ErrorCard from "../../pages/ErrorCard/ErrorCard";
+import { LoadingContext } from "../../contexts/LoadingContext";
+import LoadingPage from "../../pages/LoadingPage/LoadingPage";
 
 export default function AccountsList() {
   const { modifiedAccounts } = useContext(AccountsContext);
+  const { isAccountsError } = useContext(ErrorContext);
+  const { isAccountsLoading } = useContext(LoadingContext);
+
+  if (isAccountsLoading) return <LoadingPage />;
+  if (isAccountsError) return <ErrorCard />;
 
   return (
     <div className={Styles.AccountsList}>

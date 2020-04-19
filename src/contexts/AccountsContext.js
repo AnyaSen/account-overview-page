@@ -7,8 +7,8 @@ import { ErrorContext } from "./ErrorContext";
 export const AccountsContext = createContext();
 
 export const AccountsContextProvider = ({ children }) => {
-  const { setIsLoading } = useContext(LoadingContext);
-  const { setIsError } = useContext(ErrorContext);
+  const { setIsAccountsLoading } = useContext(LoadingContext);
+  const { setIsAccountsError } = useContext(ErrorContext);
 
   const [accNumber, setAccNumber] = useState("");
   const [accounts, setAccounts] = useState([]);
@@ -19,18 +19,19 @@ export const AccountsContextProvider = ({ children }) => {
       "https://qmkjbvj35b.execute-api.eu-north-1.amazonaws.com/get/user/145127236/investments";
 
     try {
+      setIsAccountsLoading(true);
+
       const accountsData = await fetchData(user_accounts_URL);
 
       setAccounts(accountsData);
       setModifiedAccounts(accountsData);
       setAccNumber(accountsData.length);
-
-      setIsLoading(false);
+      setIsAccountsLoading(false);
     } catch (error) {
       console.log(error);
 
-      setIsError(true);
-      setIsLoading(false);
+      setIsAccountsError(true);
+      setIsAccountsLoading(false);
     }
   };
 
