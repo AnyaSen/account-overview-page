@@ -13,13 +13,15 @@ export default function AccountsList() {
         <h3>Sorry, account not found</h3>
       ) : (
         modifiedAccounts.map((account, index) => {
-          const { name, id, balance, currency } = account;
+          const { name, id, balance, currency, accountState } = account;
+          const isActive = accountState === "ACTIVE";
+
           return (
             <Account
               name={name}
               ID={id}
               balance={balance + currency.symbol}
-              active={true}
+              active={isActive}
               key={index}
             />
           );
