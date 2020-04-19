@@ -5,6 +5,10 @@ export const ErrorContext = createContext();
 export const ErrorContextProvider = ({ children }) => {
   const [isAccountsError, setIsAccountsError] = useState(false);
   const [isUserInfoError, setIsUserInfoError] = useState(false);
+  const [errorMessages, setErrorMessages] = useState({
+    accountsError: "Sorry, could not get the accounts data",
+    userInfoError: "Sorry, could not get the user data"
+  });
 
   return (
     <ErrorContext.Provider
@@ -12,7 +16,8 @@ export const ErrorContextProvider = ({ children }) => {
         isAccountsError,
         setIsAccountsError,
         isUserInfoError,
-        setIsUserInfoError
+        setIsUserInfoError,
+        errorMessages
       }}
     >
       {children}
