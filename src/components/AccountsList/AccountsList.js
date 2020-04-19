@@ -4,7 +4,7 @@ import Styles from "./AccountsList.module.scss";
 
 import Account from "./Account/Account";
 import { ErrorContext } from "../../contexts/ErrorContext";
-import ErrorCard from "../../pages/ErrorCard/ErrorCard";
+import ErrorCard from "../../components/ErrorCard/ErrorCard";
 import { LoadingContext } from "../../contexts/LoadingContext";
 import LoadingPage from "../../pages/LoadingPage/LoadingPage";
 
