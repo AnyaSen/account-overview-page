@@ -19,6 +19,7 @@ export default function AccountsPage() {
   return (
     <div className={Styles.AccountsPage}>
       <Header />
+
       <AccountsList />
     </div>
   );

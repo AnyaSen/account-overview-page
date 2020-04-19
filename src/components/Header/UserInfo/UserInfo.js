@@ -7,6 +7,7 @@ export default function UserInfo({ userName, userPicture, accountsNumber }) {
     <div className={Styles.UserInfoContainer}>
       <div className={Styles.UserImgContainer}>
         <img src={userPicture} alt="User Face" />
+
         <p>{userName}</p>
       </div>
 

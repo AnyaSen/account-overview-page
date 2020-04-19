@@ -7,6 +7,7 @@ export default function LoadingPage() {
   return (
     <div data-testid="Loader" className={Styles.LoadingPage}>
       <img src={loader} alt="loader icon" />
+
       <h3>Loading...</h3>
     </div>
   );

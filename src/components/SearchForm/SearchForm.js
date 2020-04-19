@@ -91,6 +91,7 @@ export default function SearchForm() {
             onChange={onChangeIdValue}
           />
         </div>
+
         <div className={Styles.btnsContainer}>
           <PrimaryButton
             btnText="Search"

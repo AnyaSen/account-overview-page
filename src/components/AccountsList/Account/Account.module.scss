@@ -25,6 +25,7 @@
 
   .inactivePin {
     @extend .activePin;
+
     background-color: $color-red;
   }
 }

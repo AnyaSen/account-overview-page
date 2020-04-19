@@ -17,6 +17,7 @@
   @include sm {
     padding-bottom: $space-1;
     margin: 0;
+
     h1 {
       margin: $space-0;
     }
@@ -39,6 +40,7 @@
     margin: 0.7rem;
   }
 }
+
 .btnsContainer {
   display: flex;
   align-items: center;

@@ -20,6 +20,7 @@ export default function Header() {
         userPicture={userPic}
         accountsNumber={accNumber}
       />
+
       <SearchForm />
     </div>
   );

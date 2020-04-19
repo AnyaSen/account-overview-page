@@ -13,12 +13,12 @@ export const UserInfoContextProvider = ({ children }) => {
   const [name, setName] = useState("SOME NAME");
 
   const setInitialUserData = async () => {
-    const user_info_URL =
+    const userInfoURL =
       "https://qmkjbvj35b.execute-api.eu-north-1.amazonaws.com/get/user/145127236/";
 
     try {
       setIsUserInfoLoading(true);
-      const userData = await fetchData(user_info_URL);
+      const userData = await fetchData(userInfoURL);
 
       const { firstName, lastName } = userData;
 
@@ -26,6 +26,7 @@ export const UserInfoContextProvider = ({ children }) => {
       setIsUserInfoLoading(false);
     } catch (error) {
       console.log(error);
+
       setIsUserInfoError(true);
       setIsUserInfoLoading(false);
     }

@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={AccountsPage} />
+
         <Redirect to="/" />
       </Switch>
     </div>
