@@ -7,9 +7,11 @@ import SecondaryButton from "../Buttons/SecondaryButton/SecondaryButton";
 
 import { AccountsContext } from "../../contexts/AccountsContext";
 
-import { filterByName } from "../../services/filterName";
-import { filterByID } from "../../services/filterID";
-import { filterByNameAndID } from "../../services/filterNameAndID";
+import {
+  filterAccountsByID,
+  filterAccountsByName,
+  filterAccountsByNameAndID
+} from "../../services/filterAccounts";
 
 export default function SearchForm() {
   const { modifiedAccounts, setModifiedAccounts, accounts } = useContext(
@@ -37,12 +39,16 @@ export default function SearchForm() {
   };
 
   const handleSubmit = () => {
-    const filteredAccountsByName = filterByName(modifiedAccounts, nameValue);
-    const filteredAccountsById = filterByID(modifiedAccounts, idValue);
+    const filteredAccountsByName = filterAccountsByName(
+      modifiedAccounts,
+      nameValue
+    );
+    const filteredAccountsById = filterAccountsByID(modifiedAccounts, idValue);
 
-    const filteredAccountsByNameAndID = filterByNameAndID(
-      filteredAccountsByName,
-      filteredAccountsById
+    const filteredAccountsByNameAndID = filterAccountsByNameAndID(
+      nameValue,
+      idValue,
+      modifiedAccounts
     );
 
     if (!nameValue) {
