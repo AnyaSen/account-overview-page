@@ -4,12 +4,15 @@ import Styles from "./Account.module.scss";
 
 export default function Account({ name, ID, balance, active }) {
   return (
-    <div className={Styles.Account}>
-      <div className={active ? Styles.activePin : Styles.inactivePin}></div>
+    <div data-testid="Account" className={Styles.Account}>
+      <div
+        data-testid="active-pin"
+        className={active ? Styles.activePin : Styles.inactivePin}
+      ></div>
 
-      <p>Name: {name}</p>
-      <p>ID: {ID}</p>
-      <p>Balance: {balance}</p>
+      <p data-testid="AccountName">Name: {name}</p>
+      <p data-testid="AccountID">ID: {ID}</p>
+      <p data-testid="AccountBalance">Balance: {balance}</p>
     </div>
   );
 }

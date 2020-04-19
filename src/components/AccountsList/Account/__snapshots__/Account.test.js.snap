@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Account /> Should have correct name, id, balance and active status. 1`] = `
+<div
+  class="Account"
+  data-testid="Account"
+>
+  <div
+    class="activePin"
+    data-testid="active-pin"
+  />
+  <p
+    data-testid="AccountName"
+  >
+    Name: 
+    FUNDING_ACCOUNT
+  </p>
+  <p
+    data-testid="AccountID"
+  >
+    ID: 
+    ZCPN537
+  </p>
+  <p
+    data-testid="AccountBalance"
+  >
+    Balance: 
+    60
+  </p>
+</div>
+`;
