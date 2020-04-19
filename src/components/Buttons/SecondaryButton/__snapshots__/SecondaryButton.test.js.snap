@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SecondaryButton /> Should have correct text and be disabled. 1`] = `
+<button
+  class="SecondaryButton"
+  disabled=""
+>
+  Show All
+</button>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrimaryButton /> Should have correct text and be disabled. 1`] = `
+<button
+  class="PrimaryButton"
+  disabled=""
+  type="submit"
+  value="submit"
+>
+  Search
+</button>
+`;
