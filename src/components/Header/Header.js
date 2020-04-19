@@ -14,7 +14,7 @@ export default function Header() {
   const { accNumber } = useContext(AccountsContext);
 
   return (
-    <div className={Styles.Header}>
+    <div data-testid="Header" className={Styles.Header}>
       <UserInfo
         userName={name}
         userPicture={userPic}

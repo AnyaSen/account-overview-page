@@ -10,7 +10,9 @@ export default function UserInfo({ userName, userPicture, accountsNumber }) {
         <p>{userName}</p>
       </div>
 
-      <p>Number of accounts: {accountsNumber}</p>
+      <p data-testid="number-of-accounts">
+        Number of accounts: {accountsNumber}
+      </p>
     </div>
   );
 }

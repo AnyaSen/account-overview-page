@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserInfo /> Should have correct name & number. 1`] = `
+<div
+  class="UserInfoContainer"
+>
+  <div
+    class="UserImgContainer"
+  >
+    <img
+      alt="User Face"
+      src="userPic.svg"
+    />
+    <p>
+      John Smith
+    </p>
+  </div>
+  <p
+    data-testid="number-of-accounts"
+  >
+    Number of accounts: 
+    70
+  </p>
+</div>
+`;
