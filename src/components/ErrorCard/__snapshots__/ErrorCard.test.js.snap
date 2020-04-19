@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorCard /> Should contain the correct image and shows error message for accounts 1`] = `
+<div
+  class="ErrorCardContainer"
+>
+  <img
+    alt="Error"
+    src="error.png"
+  />
+  <h3
+    data-testid="errorMessage"
+  >
+    Sorry, could not get the accounts data
+  </h3>
+</div>
+`;
