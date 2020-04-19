@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
+import Styles from "./Header.module.scss";
 
 import { UserInfoContext } from "../../contexts/UserInfoContext";
 import { AccountsContext } from "../../contexts/AccountsContext";
 
-import Styles from "./Header.module.scss";
 import userPic from "../../assets/img/userPic.svg";
 
 import SearchForm from "../SearchForm/SearchForm";

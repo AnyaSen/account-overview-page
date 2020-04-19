@@ -6,14 +6,19 @@
   flex-direction: column;
   text-align: center;
   margin-top: $space-1;
-  margin-bottom: $space-2;
+  padding-bottom: $space-2;
   flex-wrap: wrap;
+  border-bottom: 1px solid $color-border;
 
   h1 {
     margin: $space-2;
+  }
 
-    @include sm {
-      margin: $space-1;
+  @include sm {
+    padding-bottom: $space-1;
+    margin: 0;
+    h1 {
+      margin: $space-0;
     }
   }
 }
@@ -29,6 +34,10 @@
 
 .inputsContainer {
   margin: $space-0 $space-2;
+
+  @include sm {
+    margin: 0.7rem;
+  }
 }
 .btnsContainer {
   display: flex;

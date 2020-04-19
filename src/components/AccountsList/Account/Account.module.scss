@@ -12,14 +12,18 @@
     margin: $space-2 $space-1;
     font-size: 5rem;
   }
-}
 
-.activePin {
-  background-color: $color-green;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+  .activePin {
+    background-color: $color-green;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 0.5rem;
+    margin-top: -$space-2;
+    margin-left: -$space-2;
+  }
+
+  .inactivePin {
+    @extend .activePin;
+    background-color: $color-red;
+  }
 }

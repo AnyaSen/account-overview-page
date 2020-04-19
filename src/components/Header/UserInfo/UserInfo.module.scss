@@ -8,12 +8,8 @@
   align-items: center;
 
   @include sm {
-    flex-direction: column;
-    padding-top: $space-2;
-    padding-bottom: $space-1;
-
     p {
-      margin-bottom: $space-0;
+      font-size: $font-xs;
     }
   }
 }
@@ -21,10 +17,6 @@
 .UserImgContainer {
   display: flex;
   align-items: center;
-
-  @include sm {
-    flex-direction: column;
-  }
 
   img {
     height: 3rem;
@@ -35,8 +27,9 @@
     margin-right: $space-1;
 
     @include sm {
-      flex-direction: column;
-      margin-bottom: $space-1;
+      height: 2rem;
+      width: 2rem;
+      align-self: center;
     }
   }
 }
