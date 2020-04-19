@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { AccountsContext } from "../../contexts/AccountsContext";
+
 import Styles from "./AccountsList.module.scss";
 
-import Account from "./Account/Account";
 import { ErrorContext } from "../../contexts/ErrorContext";
-import ErrorCard from "../../components/ErrorCard/ErrorCard";
 import { LoadingContext } from "../../contexts/LoadingContext";
+
+import Account from "./Account/Account";
+import ErrorCard from "../../components/ErrorCard/ErrorCard";
 import LoadingPage from "../../pages/LoadingPage/LoadingPage";
 
 export default function AccountsList() {
