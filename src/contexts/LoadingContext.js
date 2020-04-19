@@ -3,13 +3,16 @@ import React, { createContext, useState } from "react";
 export const LoadingContext = createContext();
 
 export const LoadingContextProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isAccountsLoading, setIsAccountsLoading] = useState(true);
+  const [isUserInfoLoading, setIsUserInfoLoading] = useState(true);
 
   return (
     <LoadingContext.Provider
       value={{
-        isLoading,
-        setIsLoading
+        isAccountsLoading,
+        setIsAccountsLoading,
+        isUserInfoLoading,
+        setIsUserInfoLoading
       }}
     >
       {children}
