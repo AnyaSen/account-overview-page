@@ -4,7 +4,7 @@ import Styles from "./AccountsPage.module.scss";
 import Header from "../../components/Header/Header";
 import AccountsList from "../../components/AccountsList/AccountsList";
 import LoadingPage from "../LoadingPage/LoadingPage";
-import ErrorCard from "../ErrorCard/ErrorCard";
+import ErrorCard from "../../components/ErrorCard/ErrorCard";
 
 import { LoadingContext } from "../../contexts/LoadingContext";
 import { ErrorContext } from "../../contexts/ErrorContext";
