@@ -22,7 +22,7 @@
 
 [Click to go to live demo](https://investment-accounts-overview.netlify.app/).
 
-### Video demo:
+### Video demo: (click the image below to play)
 
 <a href="https://vimeo.com/409529552" target='_blank'>
     <img src="./video.png" alt="Demo Video"/>
