@@ -20,20 +20,20 @@
 
 ### Demo link
 
-[Click to go to live demo]().
+[Click to go to live demo](https://investment-accounts-overview.netlify.app/).
 
 ### Video demo:
 
-<a href="" target='_blank'>
-	<img src="./video.png" alt="Demo Video"/>
+<a href="https://vimeo.com/409529552" target='_blank'>
+    <img src="./video.png" alt="Demo Video"/>
 </a>
 
 ## How get the app locally
 
-- **`git clone https://github.com/AnyaSen/account-overview-page.git:`**
+- **`git clone https://github.com/AnyaSen/account-overview-page.git`**
 
 - **`npm install`**
 
 ### To run tests:
 
-- `npm test`
+- **`npm test`**
