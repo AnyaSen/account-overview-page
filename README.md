@@ -5,6 +5,7 @@
 - JavaSctipt
   - React
   - Jest testing framework
+  - Testing library (React testing library)
 - HTML
 - CSS
   - Sass
@@ -12,11 +13,11 @@
 
 ### App functionality overview:
 
-- This app displays the data fetched from the provided API
-- The app shows investment accounts overview of the user
-- For a better navigation, there is a search fied
-- The account can be found by Name and/or ID
-- Button Show All gets back to all accounts
+- This app displays the data fetched from the provided API.
+- The app shows investment accounts overview of the user.
+- For a better navigation, there is a search fied.
+- The account can be found by Name and/or ID.
+- Button Show All gets back to all accounts.
 
 ### Demo link
 
@@ -34,6 +35,10 @@
 
 - **`npm install`**
 
-### To run tests:
+### Commands:
 
-- **`npm test`**
+- to run locally: **`npm start`**
+- to run tests **`npm test`**
+- to create production built **`npm run build`**
+
+Happy coding!
